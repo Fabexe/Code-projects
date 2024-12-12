@@ -1,0 +1,4 @@
+Links :
+    - https://lastminuteengineers.com/433mhz-rf-wireless-arduino-tutorial/?utm_content=cmp-true
+    - https://icgram.com/wp-content/uploads/2020/06/TA6053.pdf
+    - https://www.circuits-diy.com/fs1000a-433mhz-rf-transmitter-receiver-modules/
