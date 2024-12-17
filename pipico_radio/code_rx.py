@@ -15,7 +15,7 @@ def read_bit(pin):
     bitstream.append(value)
     
     # On accumule les bits par groupes de 8 pour former un octet
-    if len(bitstream) == 8:
+    if len(bitstream) == 4:
         byte = int("".join(map(str, bitstream)), 2)  # Convertir les bits en un entier
         byte_received.append(byte)
         bitstream.clear()  # Réinitialiser les bits pour le prochain octet
@@ -31,12 +31,12 @@ def main():
         while True:
             if byte_received:
                 # Afficher les données reçues en ASCII
-                hex_data = ''.join(['{:02X}'.format(b) for b in byte_received])
+                hex_data = ''.join(['{:X}'.format(b) for b in byte_received])
                 ascii_data = ''.join([chr(b) for b in byte_received if 32 <= b <= 126])  # Filtre ASCII imprimable
                 print(f"Données reçues (Hex) : {hex_data}")
                 print(f"Données reçues (ASCII) : {ascii_data}")
                 byte_received.clear()
-            time.sleep(0.1)
+            time.sleep(0.0001)
     except KeyboardInterrupt:
         print("Programme arrêté.")
         sampling_timer.deinit()  # Désactiver la minuterie
