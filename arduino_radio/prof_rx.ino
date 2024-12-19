@@ -5,6 +5,7 @@ char cmd;
 char old_cmd;
 
 void setup() {
+    Serial.begin(9600);
     ArduinoMaster.begin(9600);
 }
 
