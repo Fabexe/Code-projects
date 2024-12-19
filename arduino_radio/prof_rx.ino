@@ -1,4 +1,6 @@
 #include <SoftwareSerial.h>
+
+SoftwareSerial ArduinoMaster(2,3);
 char cmd;
 char old_cmd;
 
