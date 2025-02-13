@@ -1,5 +1,6 @@
 from machine import Pin, I2C
 import ssd1306
+import arduino_grove_imu
 
 # using default address 0x3c
 i2c = I2C(id=1, scl=Pin(27), sda=Pin(26))
